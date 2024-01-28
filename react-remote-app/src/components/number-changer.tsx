@@ -2,11 +2,11 @@ import { useEffect, useState } from "react"
 
 
 type NumberChangerProps =  { 
-  initialValue: number
+  initialValue?: number
 }
 
-const NumberChanger = ({ initialValue }: NumberChangerProps) => {
-  const [number, setNumber] = useState(initialValue ?? 0);
+const NumberChanger = ({ initialValue = 0 }: NumberChangerProps) => {
+  const [number, setNumber] = useState(initialValue);
 
 
   useEffect(() => {
